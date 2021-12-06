@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { getDateTimeForInput } from '../../misc/date-utils';
+
 
 const DemoFormFunctional = (props) => {
   const [person, setPerson] = useState({
     firstName: "",
     lastName: "",
-    dateOfBirth: new Date().toISOString()
+    dateOfBirth: getDateTimeForInput()
   });
 
   function handleSubmit(event) {

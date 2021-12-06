@@ -1,4 +1,5 @@
 import { withFormik } from 'formik';
+import { getDateTimeForInput } from '../../misc/date-utils';
 
 const DemoFormikForm = ({ values, touched, errors, handleChange, handleBlur, handleSubmit }) => {
   return (
@@ -43,7 +44,7 @@ const DemoFormikFormHOC = withFormik({
   mapPropsToValues: () => ({
     firstName: "",
     lastName: "",
-    dateOfBirth: new Date().toISOString()
+    dateOfBirth: getDateTimeForInput()
   }),
   validate: formFields => {
     const errors = {};

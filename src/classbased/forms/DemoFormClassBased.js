@@ -1,11 +1,12 @@
 import { Component } from "react";
+import { getDateTimeForInput } from "../../misc/date-utils";
 
 export default class DemoFormClassBased extends Component {
   state = {
     person: {
       firstName: "",
       lastName: "",
-      dateOfBirth: new Date()
+      dateOfBirth: getDateTimeForInput()
     }
   };
 
