@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 const colors = ['red', 'brown', 'blue', 'green', 'black'];
 
@@ -6,7 +6,7 @@ const ColorMessageFunctional = ({message}) => {
   let [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    // using functional pattern from
+    // using functional 'mounted component check' pattern from
     // https://stackoverflow.com/questions/53949393/cant-perform-a-react-state-update-on-an-unmounted-component
     let mounted = true;
     const counterTimer = setInterval(() => {
@@ -25,7 +25,7 @@ const ColorMessageFunctional = ({message}) => {
       <p 
         style={
           { color: colors[counter % colors.length]}}>
-            Counter (Functional) {counter % colors.length}! - color: {colors[counter % colors.length]}
+           { message } 
       </p>
   );
 };

@@ -1,3 +1,4 @@
+import './styles.scss';
 import { useState } from 'react';
 import SayHelloClassBased from "./classbased/props/SayHelloClassBased";
 import SimplestClass from "./classbased/simplest/SimplestClass";
@@ -10,14 +11,18 @@ import DemoFormClassBased from "./classbased/forms/DemoFormClassBased";
 import DemoFormFunctional from "./functional/forms/DemoFormFunctional";
 import DemoFormikForm from './functional/forms/DemoFormikForm';
 import TodoListManager from "./functional/reduxalternative/TodoListManager";
-import "./styles.css";
+
+import DrawingCanvasClassBased from './classbased/canvas/DrawingCanvasClassBased';
+
+import DrawingCanvasFunctional from './functional/canvas/DrawingCanvasFunctional';
+import DemoReactHookForm from './functional/forms/DemoReactHookFormFunctional';
 
 export default function App() {
   const [displayCounters, setDisplayCounters] = useState(true);
 
   return (
     <div className="App">
-      <SimplestFunctional></SimplestFunctional>
+      {/* <SimplestFunctional></SimplestFunctional>
       <SimplestClass></SimplestClass>
       <SayHelloFunctional name="Ken"></SayHelloFunctional>
       <SayHelloClassBased name="Ken"></SayHelloClassBased>
@@ -34,9 +39,19 @@ export default function App() {
       <DemoFormFunctional />
       <hr />
       <DemoFormikForm />
-      <hr />
+      <hr /> */}
+      <DemoReactHookForm />
+      {/* <hr />
       <TodoListManager />
 
+      <hr />
+      <DrawingCanvasClassBased />
+
+      <hr />
+
+      <DrawingCanvasFunctional /> */}
+
     </div>
+
   );
 }

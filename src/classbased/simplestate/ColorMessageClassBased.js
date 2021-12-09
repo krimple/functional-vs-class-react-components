@@ -3,7 +3,7 @@ import { Component } from "react";
 const colors = ['red', 'brown', 'blue', 'green', 'black'];
 
 export default class CounterClassBased extends Component {
-  // per https://stackoverflow.com/questions/53949393/cant-perform-a-react-state-update-on-an-unmounted-component
+  // see https://stackoverflow.com/questions/53949393/cant-perform-a-react-state-update-on-an-unmounted-component
   _mounted = false;
 
   state = {
@@ -29,10 +29,7 @@ export default class CounterClassBased extends Component {
       <p 
         style={
           { color: colors[this.state.counter % colors.length]}}>
-            Counter (Functional) 
-            {this.state.counter % colors.length}! 
-            - color: 
-            {colors[this.state.counter % colors.length]}
+            { this.props.message }
       </p>
     );
   }

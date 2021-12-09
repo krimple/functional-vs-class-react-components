@@ -1,0 +1,29 @@
+.form {
+  width: 50%;
+  margin-left: 25%;
+  text-align: left;
+  div.formField {
+      display: block;
+      height: 1.5rem;
+      font-size: 1rem;
+      label {
+          font-weight: bold;
+          display: inline-block;
+          text-align: right;
+          width: 200px;
+          padding-right: 1rem;
+      }
+    }
+    div.buttonBar {
+      display: block;
+      height: 1.5rem;
+      text-align: center;
+      font-size: 1rem;
+      button {
+        text-align: center;
+        margin-left: 10px;
+      }
+      padding-top: 20px;
+      padding-right: 150px;
+  }
+}
