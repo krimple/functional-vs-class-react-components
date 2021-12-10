@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { StateInspector, useState, useReducer } from "reinspect";
 import { v4 } from 'uuid';
 const initialState = {
     tasks: []
@@ -23,15 +23,16 @@ const TodoListManager = () => {
     ))
     return (
         <>
-          <h1>Task Manager with <code>useReducer</code></h1>
-          <table>
-              <tbody>
-                { taskList }
-              </tbody>
-          </table>
-          <button onClick={() => dispatch({ type: 'add', payload: { id: v4() }})}>Add</button>
-        </>
-
+          <StateInspector name="taskManager">
+            <h1>Task Manager with <code>useReducer</code></h1>
+            <table>
+                <tbody>
+                    { taskList }
+                </tbody>
+            </table>
+            <button onClick={() => dispatch({ type: 'add', payload: { id: v4() }})}>Add</button>
+          </StateInspector>
+         </>
     )
 }
 

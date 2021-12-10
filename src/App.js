@@ -39,11 +39,14 @@ export default function App() {
       <DemoFormFunctional />
       <hr />
       <DemoFormikForm />
-      <hr /> */}
+      <hr /> 
       <DemoReactHookForm />
-      {/* <hr />
+       <hr />
+
+      */}
       <TodoListManager />
 
+      {/*}
       <hr />
       <DrawingCanvasClassBased />
 
