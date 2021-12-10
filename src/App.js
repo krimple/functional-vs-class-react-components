@@ -27,6 +27,7 @@ export default function App() {
       <SayHelloFunctional name="Ken"></SayHelloFunctional>
       <SayHelloClassBased name="Ken"></SayHelloClassBased>
 
+      {*/}
       <button onClick={() => { setDisplayCounters(!displayCounters); }}>
         Toggle Counters 
       </button>
@@ -34,6 +35,7 @@ export default function App() {
       { displayCounters && <CounterClassBased message="What a great day to be Class-Reactive!"></CounterClassBased> }
       { displayCounters && <ColorMessageFunctional message="What a great day to be Functional-Reactive!"></ColorMessageFunctional> }
 
+      { /*}
       <DemoFormClassBased />
       <hr />
       <DemoFormFunctional />
