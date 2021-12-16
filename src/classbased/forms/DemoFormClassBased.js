@@ -50,6 +50,7 @@ export default class DemoFormClassBased extends Component {
           <input
             type="datetime-local"
             name="dateOfBirth"
+            step={1}
             value={this.state.person.dateOfBirth}
             onChange={this.handleChange}
           />

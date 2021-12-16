@@ -42,6 +42,7 @@ const DemoFormFunctional = (props) => {
         <input
           type="datetime-local"
           name="dateOfBirth"
+          step={1}
           value={person.dateOfBirth}
           onChange={handleChange}
         />
