@@ -15,14 +15,14 @@ const DemoReactHookForm = () => {
   const {
     register,                   // set up a field
     handleSubmit,               // the submit handler wrapper
-   formState: { errors, isDirty, isValid }       // errors are automatically managed
+    reset,                      // the reset handler
+    formState: { errors, isDirty, isValid } // errors are automatically managed
 
   } = useForm({ mode: 'onChange',
       defaultValues: {
         dateOfBirth: getDateTimeForInput()
     },
  });
-
 
   return (
     <div>
@@ -63,7 +63,9 @@ const DemoReactHookForm = () => {
           <button
             type="submit"
             disabled={!isValid}>Submit</button>
-          <button type="reset">Clear</button>
+          <button
+            type="button"
+            onClick={() => reset()}>Clear</button>
         </div>
       </form>
     </div>
