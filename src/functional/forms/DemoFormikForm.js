@@ -5,6 +5,7 @@ const DemoFormikForm = ({ values, touched, errors, handleChange, handleBlur, han
   return (
     <div>
       <h1>Demo Formik Form</h1>
+      <p><em>View submitted data in JS Console</em></p>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -25,6 +26,7 @@ const DemoFormikForm = ({ values, touched, errors, handleChange, handleBlur, han
         <input
           type="datetime-local"
           name="dateOfBirth"
+          step={1}
           value={values.dateOfBirth}
           onChange={handleChange}
           onBlur={handleBlur}

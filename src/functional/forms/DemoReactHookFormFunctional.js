@@ -15,7 +15,8 @@ const DemoReactHookForm = () => {
   const {
     register,                   // set up a field
     handleSubmit,               // the submit handler wrapper
-   formState: { errors, isDirty, isValid }       // errors are automatically managed
+    reset,                      // the reset handler
+    formState: { errors, isDirty, isValid } // errors are automatically managed
 
   } = useForm({ mode: 'onChange',
       defaultValues: {
@@ -23,18 +24,17 @@ const DemoReactHookForm = () => {
     },
  });
 
- 
   return (
     <div>
       <h1>Demo React Hook Form</h1>
       <p><em>View submitted data in JS Console</em></p>
-      <form className={form} 
+      <form className={form}
             onSubmit={handleSubmit(doSubmit)}>
         <div className={styles.formField}>
           <label htmlFor="firstName">First Name</label>
           <input
             name="firstName"
-            type="text" 
+            type="text"
             {...register('firstName', {required: true})} />
 
           { errors?.firstName?.type || '' }
@@ -54,15 +54,18 @@ const DemoReactHookForm = () => {
           <input
             name="dateOfBirth"
             type="datetime-local"
+            step={1}
             {...register('dateOfBirth', {required: true })} />
-            { errors.dateOfBirth?.type || '' } 
+            { errors.dateOfBirth?.type || '' }
         </div>
 
         <div className={styles.buttonBar}>
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             disabled={!isValid}>Submit</button>
-          <button type="reset">Clear</button>
+          <button
+            type="button"
+            onClick={() => reset()}>Clear</button>
         </div>
       </form>
     </div>
